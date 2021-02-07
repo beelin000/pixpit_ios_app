@@ -40,7 +40,7 @@ class LoginScreen extends StatelessWidget {
       // int userId = 3;
 
       // ///创建 dio
-      Dio dio = new Dio(options);
+      // Dio dio = new Dio(options);
 
       // ///请求地址
       // ///传参方式1
@@ -54,26 +54,28 @@ class LoginScreen extends StatelessWidget {
       // dio.options.headers["appVersionName"] = "V 1.0.1";
 
       ///发起get请求
-      Response response =
-          await dio.get('https://randomuser.me/api/?inc=name,email');
-      // print(response.data);
-      // Map<List, dynamic> data = jsonDecode(response.data);
-      // Map data = jsonDecode(response.data);
-      print('\n');
-      print('\n');
-      print('\n');
-      print(response.data['results'][0]);
-      user = new User(response.data['results'][0]['name']['first'],
-          response.data['results'][0]['email']);
-      print(user);
+      // Response response =
+      //     await dio.get('https://randomuser.me/api/?inc=name,email');
+      // // print(response.data);
+      // // Map<List, dynamic> data = jsonDecode(response.data);
+      // // Map data = jsonDecode(response.data);
+      // print('\n');
+      // print('\n');
+      // print(response.data['results'][0]);
+      // user = new User(response.data['results'][0]['name']['first'],
+      //     response.data['results'][0]['email']);
+      // print(user);
 
       // 跳转至登陆结果页
-      Navigator.push(
-        context,
-        new MaterialPageRoute(
-          builder: (context) => new LoginResult(user: user),
-        ),
-      );
+      // Navigator.push(
+      //   context,
+      //   new MaterialPageRoute(
+      //     builder: (context) => LoginResult(user: user),
+      //   ),
+      // );
+
+      // 跳转至登陆载入页面
+      Navigator.pushNamed(context, "loading_screen");
     }
 
     return Scaffold(

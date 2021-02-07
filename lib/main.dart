@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pixpit_demo/screens/LoadingScreen.dart';
 
 import './screens/LoginScreen.dart';
 
@@ -29,8 +30,8 @@ class MyApp extends StatelessWidget {
 
         // 登陆界面
         "login_screen": (context) => LoginScreen(),
-
-      
+        // 载入界面
+        "loading_screen": (context) => LoadingScreen(),
         // 首页广场
         "/": (context) =>
             MyHomePage(title: 'Flutter Demo Home Page'), //注册首页路由 // 省略其它路由注册信息

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pixpit_demo/models/user.dart';
 
-
 class LoginResult extends StatelessWidget {
   final User user;
 
@@ -41,7 +40,6 @@ class LoginResult extends StatelessWidget {
         } else if (snapshot.hasError) {
           return new Text("${snapshot.error}");
         }
-
         // By default, show a loading spinner
         return Container(child: Center(widthFactor: 1, heightFactor: 0.8, child: CircularProgressIndicator(),),);
       },
